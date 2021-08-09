@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f899ed78-a689-42b4-95f7-26bc26877ca2" name="Default Changelist" comment="" />
+    <list default="true" id="f899ed78-a689-42b4-95f7-26bc26877ca2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +19,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -34,6 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -41,13 +48,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
-  <component name="RunManager" selected="Application.NIODoubleMain">
-    <configuration name="BIOClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.io.bio.BIOClient" />
+  <component name="RunManager" selected="Application.InterfaceAddressDemo">
+    <configuration name="InetAddressDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.io.network.InetAddressDemo" />
       <module name="io" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.io.bio.*" />
+          <option name="PATTERN" value="com.io.network.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,12 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.io.bio.BIOServer" />
+    <configuration name="InterfaceAddressDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.io.network.InterfaceAddressDemo" />
       <module name="io" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.io.bio.*" />
+          <option name="PATTERN" value="com.io.network.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NIOServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.io.nio.NIOServer" />
+    <configuration name="NetworkInterfaceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.io.network.NetworkInterfaceDemo" />
       <module name="io" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.io.nio.*" />
+          <option name="PATTERN" value="com.io.network.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,19 +115,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BIOServer" />
-      <item itemvalue="Application.BIOClient" />
-      <item itemvalue="Application.NIOServer" />
       <item itemvalue="Application.NIOClient" />
       <item itemvalue="Application.NIODoubleMain" />
+      <item itemvalue="Application.NetworkInterfaceDemo" />
+      <item itemvalue="Application.InetAddressDemo" />
+      <item itemvalue="Application.InterfaceAddressDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.InterfaceAddressDemo" />
+        <item itemvalue="Application.InetAddressDemo" />
+        <item itemvalue="Application.NetworkInterfaceDemo" />
         <item itemvalue="Application.NIODoubleMain" />
         <item itemvalue="Application.NIOClient" />
-        <item itemvalue="Application.NIOServer" />
-        <item itemvalue="Application.BIOServer" />
-        <item itemvalue="Application.BIOClient" />
       </list>
     </recent_temporary>
   </component>
@@ -151,6 +158,7 @@
       <workItem from="1626922406610" duration="22473000" />
       <workItem from="1627020802292" duration="4120000" />
       <workItem from="1627538857693" duration="9672000" />
+      <workItem from="1628472698678" duration="21901000" />
     </task>
     <servers />
   </component>
@@ -162,50 +170,58 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626922480057" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1627018817531">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1628502758635">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626932564437" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627018817531" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1627018817530">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628502758635" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1628502758635">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626932564436" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627018817530" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1627018817530">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628502758635" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1628502758635">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626932564436" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627018817530" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1627018817531">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628502758635" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1628502758635">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626932564436" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627018817531" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1626932555432">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628502758635" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1628501110983">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626932555432" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1626932555431">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628501110983" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1628501110983">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626932555431" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1626932555431">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628501110983" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1628501110983">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626932555431" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1626932555432">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628501110983" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1628501110983">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626932555432" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628501110983" />
     <state x="2381" y="162" key="SettingsEditor" timestamp="1626922503242">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626922503242" />
-    <state x="2601" y="261" width="582" height="524" key="StructurePopup" timestamp="1627902420659">
+    <state x="2601" y="79" width="582" height="734" key="StructurePopup" timestamp="1628508097669">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2601" y="261" width="582" height="524" key="StructurePopup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627902420659" />
+    <state x="2601" y="79" width="582" height="734" key="StructurePopup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628508097669" />
+    <state width="473" height="446" key="SwitcherDM" timestamp="1628487418955">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="473" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628487418955" />
     <state x="2369" y="0" width="1473" height="1027" key="dock-window-1" timestamp="1626924135388">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
