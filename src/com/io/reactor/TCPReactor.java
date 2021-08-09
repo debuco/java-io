@@ -11,20 +11,22 @@ import java.util.Set;
 public class TCPReactor implements Runnable {
 
     private final ServerSocketChannel ssc;
-    // mainReactor用的selector
+    /**
+     *  mainReactor用的selector
+     */
     private final Selector selector;
 
     public TCPReactor(int port) throws IOException {
         selector = Selector.open();
         ssc = ServerSocketChannel.open();
         InetSocketAddress addr = new InetSocketAddress(port);
-        // 在ServerSocketChannel綁定監聽端口
+        // 在ServerSocketChannel绑定监听端口
         ssc.socket().bind(addr);
-        // 設置ServerSocketChannel為非阻塞
+        // 设置ServerSocketChannel为非阻塞
         ssc.configureBlocking(false);
-        // ServerSocketChannel向selector註冊一個OP_ACCEPT事件，然後返回該通道的key
+        // ServerSocketChannel向selector注册一个OP_ACCEPT事件，然后返回该通道的key
         SelectionKey sk = ssc.register(selector, SelectionKey.OP_ACCEPT);
-        // 給定key一個附加的Acceptor對象
+        // 给定key一个附加的Acceptor对象
         sk.attach(new Acceptor(ssc));
     }
 

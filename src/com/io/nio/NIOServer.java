@@ -65,7 +65,9 @@ public class NIOServer implements Runnable {
         }
     }
 
-    // 需要一个线程负责Selector的轮询
+    /**
+     * 需要一个线程负责Selector的轮询
+     */
     @Override
     public void run() {
         while (true) {
@@ -105,7 +107,10 @@ public class NIOServer implements Runnable {
         }
     }
 
-    // 设置阻塞，等待Client请求。在传统IO编程中，用的是ServerSocket和Socket。在NIO中采用的ServerSocketChannel和SocketChannel
+    /**
+     * @param: selectionKey
+     * 设置阻塞，等待Client请求。在传统IO编程中，用的是ServerSocket和Socket。在NIO中采用的ServerSocketChannel和SocketChannel
+     */
     private void accept(SelectionKey selectionKey) {
         try {
             // 1.获取通道服务
