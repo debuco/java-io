@@ -1,8 +1,7 @@
 package com.io.network;
 
-import sun.nio.ch.Net;
-
 import java.net.InetAddress;
+import java.net.InterfaceAddress;
 import java.net.NetworkInterface;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -15,6 +14,8 @@ import java.util.List;
 public class NetworkInterfaceDemo {
     /**
      * 未提供public的构造器
+     * 1. 每个NetworkInterface有多个InterfaceAddress对象
+     * 2. 每个InterfaceAddress对象有一个InetAddress对象
      */
     private static Enumeration<NetworkInterface> networkInterfaces = getDefaultNetWorkInterface();
 
@@ -58,5 +59,17 @@ public class NetworkInterfaceDemo {
             }
         }
         return inetAddresses;
+    }
+
+    public static List<InterfaceAddress> getIterfaceAddress() {
+        List<InterfaceAddress> interfaceAddresses = new ArrayList<>();
+        if (networkInterfaces != null) {
+            while (networkInterfaces.hasMoreElements()) {
+                NetworkInterface networkInterface = networkInterfaces.nextElement();
+                List<InterfaceAddress> addresses = networkInterface.getInterfaceAddresses();
+                interfaceAddresses.addAll(addresses);
+            }
+        }
+        return interfaceAddresses;
     }
 }
