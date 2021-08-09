@@ -2,8 +2,11 @@ package com.io.network;
 
 import sun.nio.ch.Net;
 
+import java.net.InetAddress;
 import java.net.NetworkInterface;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 
 /**
  * @author bxwang
@@ -41,5 +44,19 @@ public class NetworkInterfaceDemo {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static List<InetAddress> getInetAddress() {
+        List<InetAddress> inetAddresses = new ArrayList<>();
+        if (networkInterfaces != null) {
+            while (networkInterfaces.hasMoreElements()) {
+                NetworkInterface networkInterface = networkInterfaces.nextElement();
+                Enumeration<InetAddress> inetAddressEnumeration = networkInterface.getInetAddresses();
+                while (inetAddressEnumeration.hasMoreElements()) {
+                    inetAddresses.add(inetAddressEnumeration.nextElement());
+                }
+            }
+        }
+        return inetAddresses;
     }
 }
