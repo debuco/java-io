@@ -21,7 +21,9 @@ import java.util.concurrent.TimeUnit;
  * @author bxwang
  */
 public class BIOServer {
-    // 服务器对外的端口号
+    /**
+     * 服务器对外的端口号
+     */
     private static final Integer PORT = 8888;
 
     public static void main(String[] args) {

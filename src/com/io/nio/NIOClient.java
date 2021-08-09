@@ -11,7 +11,9 @@ public class NIOClient {
     private final static int BUFFER_SIZE = 1024;
     private final static String IP_ADDRESS = "127.0.0.1";
 
-    // 和传统的IO编程很像，很大的区别在于数据是写入缓冲区
+    /**
+     * 和传统的IO编程很像，很大的区别在于数据是写入缓冲区
+     */
     public static void main(String[] args) {
         clientReq();
     }
