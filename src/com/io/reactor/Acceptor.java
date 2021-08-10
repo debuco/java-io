@@ -46,25 +46,25 @@ public class Acceptor implements Runnable {
     @Override
     public synchronized void run() {
         try {
-            // 接受client连接請求
+            // 接受client连接请求
             SocketChannel sc = ssc.accept();
             System.out.println(sc.socket().getRemoteSocketAddress().toString()
                 + " is connected.");
 
             if (sc != null) {
-                // 設置為非阻塞
+                // 设置为非阻塞
                 sc.configureBlocking(false);
-                // 暫停線程
+                // 暂停线程
                 subReactors[selIdx].setRestart(true);
-                // 使一個阻塞住的selector操作立即返回
+                // 使一个阻塞住的selector操作立即返回
                 selectors[selIdx].wakeup();
-                // SocketChannel向selector[selIdx]註冊一個OP_READ事件，然後返回該通道的key
+                // SocketChannel向selector[selIdx]注册一个OP_READ事件，然后返回该通道的key
                 SelectionKey sk = sc.register(selectors[selIdx], SelectionKey.OP_READ);
                 // 使一個阻塞住的selector操作立即返回
                 selectors[selIdx].wakeup();
-                // 重啟線程
+                // 重启线程
                 subReactors[selIdx].setRestart(false);
-                // 給定key一個附加的TCPHandler對象
+                // 给定key一个附加的TCPHandler对象
                 sk.attach(new TCPHandler(sk, sc));
                 if (++selIdx == selectors.length) {
                     selIdx = 0;

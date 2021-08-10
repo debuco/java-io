@@ -13,22 +13,22 @@ public class TCPHandler implements Runnable {
     private final SocketChannel sc;
     private static final int THREAD_COUNTING = 10;
     /**
-     * 線程池
+     * 线程池
      */
     private static ThreadPoolExecutor pool = new ThreadPoolExecutor(
         THREAD_COUNTING, THREAD_COUNTING, 10, TimeUnit.SECONDS,
         new LinkedBlockingQueue<Runnable>());
     /**
-     * 以狀態模式實現Handler
+     * 以状态模式实现Handler
      */
     HandlerState state;
 
     public TCPHandler(SelectionKey sk, SocketChannel sc) {
         this.sk = sk;
         this.sc = sc;
-        // 初始狀態設定為READING
+        // 初始状态设定为READING
         state = new ReadState();
-        // 設置線程池最大線程數
+        // 设置线程池最大线程数
         pool.setMaximumPoolSize(32);
     }
 

@@ -22,28 +22,28 @@ public class TCPSubReactor implements Runnable {
 
     @Override
     public void run() {
-        // 在線程被中斷前持續運行
+        // 在线程被中断前持续运行
         while (!Thread.interrupted()) {
             //System.out.println("ID:" + num
             //		+ " subReactor waiting for new event on port: "
             //		+ ssc.socket().getLocalPort() + "...");
             System.out.println("waiting for restart");
-            // 在線程被中斷前以及被指定重啟前持續運行
+            // 在线程被中断前以及被指定重启前持续运行
             while (!Thread.interrupted() && !restart) {
                 try {
                     if (selector.select() == 0)
                     {
-                        // 若沒有事件就緒則不往下執行
+                        // 若沒有事件就绪则不往下执行
                         continue;
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                // 取得所有已就緒事件的key集合
+                // 取得所有已就绪事件的key集合
                 Set<SelectionKey> selectedKeys = selector.selectedKeys();
                 Iterator<SelectionKey> it = selectedKeys.iterator();
                 while (it.hasNext()) {
-                    // 根據事件的key進行調度
+                    // 根据事件的key进行调度
                     dispatch((SelectionKey) (it.next()));
                     it.remove();
                 }
@@ -52,10 +52,10 @@ public class TCPSubReactor implements Runnable {
     }
 
     /**
-     * name: dispatch(SelectionKey key) description: 調度方法，根據事件綁定的對象開新線程
+     * name: dispatch(SelectionKey key) description: 调度方法，根据事件绑定的对象开新线程
      */
     private void dispatch(SelectionKey key) {
-        // 根據事件之key綁定的對象開新線程
+        // 根据事件之key绑定的对象开新线程
         Runnable r = (Runnable) (key.attachment());
         if (r != null) {
             r.run();

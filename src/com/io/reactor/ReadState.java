@@ -23,10 +23,10 @@ public class ReadState implements HandlerState {
     public void handle(TCPHandler h, SelectionKey sk, SocketChannel sc,
                        ThreadPoolExecutor pool) throws IOException { // read()
         this.sk = sk;
-        // non-blocking下不可用Readers，因為Readers不支援non-blocking
+        // non-blocking下不可用Readers，因为Readers不支持non-blocking
         byte[] arr = new byte[1024];
         ByteBuffer buf = ByteBuffer.wrap(arr);
-        // 讀取字符串
+        // 读取字符串
         int numBytes = sc.read(buf);
         if(numBytes == -1)
         {
@@ -34,10 +34,10 @@ public class ReadState implements HandlerState {
             h.closeChannel();
             return;
         }
-        // 將讀取到的byte內容轉為字符串型態
+        // 将读取到的byte內容转为字符串类型
         String str = new String(arr);
         if ((str != null) && !str.equals(" ")) {
-            // 改變狀態(READING->WORKING)
+            // 改变状态(READING->WORKING)
             h.setState(new WorkState());
             // do process in worker thread
             pool.execute(new WorkerThread(h, str));
@@ -48,21 +48,21 @@ public class ReadState implements HandlerState {
     }
 
     /**
-     * 執行邏輯處理之函數
+     * 执行逻辑处理函数
      */
     synchronized void process(TCPHandler h, String str) {
         // do process(decode, logically process, encode)..
         // ..
-        // 改變狀態(WORKING->SENDING)
+        // 改变状态(WORKING->SENDING)
         h.setState(new WriteState());
-        // 通過key改變通道註冊的事件
+        // 通过key改变通道注册的事件
         this.sk.interestOps(SelectionKey.OP_WRITE);
-        // 使一個阻塞住的selector操作立即返回
+        // 使一个阻塞住的selector操作立即返回
         this.sk.selector().wakeup();
     }
 
     /**
-     * 工作者線程
+     * 工作者线程
      */
     class WorkerThread implements Runnable {
 
